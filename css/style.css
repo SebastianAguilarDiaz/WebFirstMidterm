@@ -220,6 +220,12 @@ body {
     filter: brightness(1.5);
 }
 
+.modal-title {
+  font-family: 'Barlow Semi Condensed', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 30px;
+  color: #3b4363 !important;
+}
 /* =========================
    RESPONSIVE
 ========================= */
