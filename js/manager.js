@@ -16,6 +16,24 @@ let rules={
     "spock":    ["scissors","rock"]
 }
 
+
+const addScore=()=>{
+    score++;
+};
+const decreaseScore=()=>{
+    score--;
+};
+const updateScore=()=>{
+    scoreText.textContent=score;
+    
+};
+
+const wins=(choice1, choice2)=>{
+    if(rules[choice1].includes(choice2)) return true;
+    else return false;
+
+};
+
 gameArea.addEventListener("click",(e)=>{
     var a=0;
     if(e.target instanceof HTMLButtonElement)
@@ -32,6 +50,7 @@ gameArea.addEventListener("click",(e)=>{
     let computersChoice=options[index];
     console.log(choice);
     console.log(computersChoice);
+    console.log(wins(choice,computersChoice));
 
     gameArea.classList.add("d-none");
     duelArea.classList.remove("d-none");
@@ -55,20 +74,6 @@ gameArea.addEventListener("click",(e)=>{
         </div>
     `;
 });
-
-let addScore=()=>{
-    score++;
-};
-let decreaseScore=()=>{
-    score--;
-};
-let updateScore=()=>{
-    scoreText.textContent=score;
-
-};
-
-
-
 
 
 
