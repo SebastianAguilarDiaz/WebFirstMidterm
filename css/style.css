@@ -108,28 +108,53 @@ body {
 
 .duel-area {
     position: relative;
-
+    display: flex;
     width: 100%;
     aspect-ratio: 1 / 1;
-
     margin-top: 30px;
+    gap: 60px;
+    justify-content: center;
+}
+
+.picked-option{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
 }
 
 .picked-title{
     color: #eeeeee;
     font-weight: 700;
     letter-spacing: 2px;
+    white-space: nowrap;
 }
 
 .duel-area .choice{
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
     width: 250px;
     height: 250px;
-    border: 20px solid;
+    border-width: 20px;
+    cursor: default;
+    z-index: 2;
 
 }
 
 .duel-area .choice:hover{
     filter: none;
+}
+
+.placeholder{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: #202536;
+    z-index: 1;
+    margin: 55px;
 }
 
 /* =========================
