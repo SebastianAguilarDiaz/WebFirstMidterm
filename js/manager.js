@@ -115,7 +115,7 @@ gameArea.addEventListener("click",(e)=>{
     },2500)
 });
 
-playAgain.addEventListener("click", () => {
+playAgain.addEventListener("click", (e) => {
     duelArea.classList.add("d-none");
     gameArea.classList.remove("d-none");
 
