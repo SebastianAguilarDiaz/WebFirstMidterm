@@ -9,6 +9,9 @@ const computerItem=document.getElementById("computer-item");
 const playAgain = document.getElementById("play-again");
 const resultBlock = document.getElementById("result-block");
 
+const body=document.getElementsByTagName("body")[0];
+
+
 let score =localStorage.getItem("myScore");
 console.log(score);
 if (score==null) score=0;
@@ -108,17 +111,26 @@ gameArea.addEventListener("click",(e)=>{
     }
     setTimeout(fadeIn,2000);
     setTimeout(()=>{
-        if(wins(choice,computersChoice))addScore();
-        else decreaseScore();
+        if(wins(choice,computersChoice)){
+            body.classList.add("user-wins");
+            addScore();
+        }
+        else {
+            decreaseScore();
+            body.classList.add("computer-wins");
+        }
         updateScore();
         resultBlock.classList.remove("d-none");
-    },2500)
+
+
+    },2500);
 });
 
 playAgain.addEventListener("click", (e) => {
     duelArea.classList.add("d-none");
     gameArea.classList.remove("d-none");
-
+    body.classList.remove("computer-wins");
+    body.classList.remove("user-wins");
     resultBlock.classList.add("d-none");
     computerItem.innerHTML = `<div class="placeholder"></div>`;
 });

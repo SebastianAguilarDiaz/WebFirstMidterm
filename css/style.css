@@ -7,10 +7,11 @@ body {
     margin: 0;
 
     background:
-        radial-gradient(
-            circle at 50% 0%,
-            hsl(214, 47%, 23%),hsl(237, 49%, 15%)
-        );
+    radial-gradient(
+        circle at 50% 0%,
+        hsl(214, 47%, 23%) 0%,
+        hsla(237, 49%, 15%) 60%
+    );
 
     min-height: 100vh;
 
@@ -18,6 +19,41 @@ body {
     font-family: "Barlow Semi Condensed", sans-serif;
     font-weight: 600;
     overflow-x: hidden;
+}
+
+.user-wins{
+background:
+    
+    radial-gradient(
+        circle at 50% 0%,
+        hsl(214, 47%, 23%) 0%,
+        hsla(237, 49%, 15%,0.4) 60%, 
+        transparent 100%
+    ),
+    radial-gradient(
+        circle 400px at 40% 50%,
+        hsl(214, 47%, 23%) 25%,
+        hsl(222, 48%, 20%) 50%,
+        hsl(229, 48%, 18%) 75%,
+        hsl(237, 49%, 15%) 100%
+    );
+}
+.computer-wins{
+    background:
+    
+        radial-gradient(
+            circle at 50% 0%,
+            hsl(214, 47%, 23%) 0%,
+            hsla(237, 49%, 15%,0.4) 60%, 
+            transparent 100%
+        ),
+        radial-gradient(
+            circle 400px at 60% 50%,
+            hsl(214, 47%, 23%) 25%,
+            hsl(222, 48%, 20%) 50%,
+            hsl(229, 48%, 18%) 75%,
+            hsl(237, 49%, 15%) 100%
+        );
 }
 
 
