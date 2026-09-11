@@ -7,6 +7,7 @@ const pickedItem = document.getElementById("picked-item");
 const computerItem=document.getElementById("computer-item");
 
 const playAgain = document.getElementById("play-again");
+const resultTitle=document.getElementById("result-title");
 const resultBlock = document.getElementById("result-block");
 
 const body=document.getElementsByTagName("body")[0];
@@ -113,10 +114,16 @@ gameArea.addEventListener("click",(e)=>{
     setTimeout(()=>{
         if(wins(choice,computersChoice)){
             body.classList.add("user-wins");
+            resultTitle.innerHTML=`
+            <h1 class="result-title">You Win!</h1>
+            `;
             addScore();
         }
         else {
             decreaseScore();
+            resultTitle.innerHTML=`
+            <h1 class="result-title">You Lose!</h1>
+            `;
             body.classList.add("computer-wins");
         }
         updateScore();
