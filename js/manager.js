@@ -115,14 +115,14 @@ gameArea.addEventListener("click",(e)=>{
         if(wins(choice,computersChoice)){
             body.classList.add("user-wins");
             resultTitle.innerHTML=`
-            <h1 class="result-title">You Win!</h1>
+            <h1 class="result-title">YOU WIN</h1>
             `;
             addScore();
         }
         else {
             decreaseScore();
             resultTitle.innerHTML=`
-            <h1 class="result-title">You Lose!</h1>
+            <h1 class="result-title">YOU LOSE</h1>
             `;
             body.classList.add("computer-wins");
         }
