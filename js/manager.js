@@ -111,6 +111,7 @@ gameArea.addEventListener("click",(e)=>{
         if(wins(choice,computersChoice))addScore();
         else decreaseScore();
         updateScore();
+        resultBlock.classList.remove("d-none");
     },2500)
 });
 
