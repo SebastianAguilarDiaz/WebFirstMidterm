@@ -4,6 +4,8 @@ const gameArea=document.getElementById("game-area");
 
 const duelArea = document.getElementById("duel-area");
 const pickedItem = document.getElementById("picked-item");
+const computerItem=document.getElementById("computer-item");
+
 let score =0;
 let options=["rock","paper","scissors","lizard","spock"]
 let rules={
@@ -35,9 +37,19 @@ gameArea.addEventListener("click",(e)=>{
     duelArea.classList.remove("d-none");
 
     pickedItem.innerHTML = `
-        <div class="choice ${choice}">
+        <div class="choice  ">
             <img
                 src="./images/icon-${choice}.svg"
+                alt="Lizard"
+            >
+        </div>
+    `;
+
+
+    computerItem.innerHTML=`
+        <div class="choice ">
+            <img
+                src="./images/icon-${computersChoice}.svg"
                 alt="Lizard"
             >
         </div>
