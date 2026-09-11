@@ -9,7 +9,10 @@ const computerItem=document.getElementById("computer-item");
 const playAgain = document.getElementById("play-again");
 const resultBlock = document.getElementById("result-block");
 
-let score =0;
+let score =localStorage.getItem("myScore");
+console.log(score);
+if (score==null) score=0;
+
 let options=["rock","paper","scissors","lizard","spock"]
 let rules={
     "rock":     ["scissors","lizard"],
@@ -28,6 +31,7 @@ const decreaseScore=()=>{
 };
 const updateScore=()=>{
     scoreText.textContent=score;
+    localStorage.setItem("myScore",score);
     
 };
 
@@ -53,9 +57,14 @@ gameArea.addEventListener("click",(e)=>{
     else return;
 
     let choice = a.classList[1];
-
-    let index=Math.floor(Math.random()*5);
-    let computersChoice=options[index];
+    
+    var index=-1;
+    let computersChoice="";
+    do{
+    index = Math.floor(Math.random()*5);
+    computersChoice=options[index];
+    }while(computersChoice==choice)
+        
     console.log(choice);
     console.log(computersChoice);
     console.log(wins(choice,computersChoice));
