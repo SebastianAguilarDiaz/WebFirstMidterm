@@ -103,6 +103,36 @@ body {
 
 
 /* =========================
+   DUEL AREA
+========================= */
+
+.duel-area {
+    position: relative;
+
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+    margin-top: 30px;
+}
+
+.picked-title{
+    color: #eeeeee;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.duel-area .choice{
+    width: 250px;
+    height: 250px;
+    border: 20px solid;
+
+}
+
+.duel-area .choice:hover{
+    filter: none;
+}
+
+/* =========================
    CHOICES
 ========================= */
 
