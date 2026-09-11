@@ -6,6 +6,9 @@ const duelArea = document.getElementById("duel-area");
 const pickedItem = document.getElementById("picked-item");
 const computerItem=document.getElementById("computer-item");
 
+const playAgain = document.getElementById("play-again");
+const resultBlock = document.getElementById("result-block");
+
 let score =localStorage.getItem("myScore");
 console.log(score);
 if (score==null) score=0;
@@ -111,6 +114,13 @@ gameArea.addEventListener("click",(e)=>{
     },2500)
 });
 
+playAgain.addEventListener("click", () => {
+    duelArea.classList.add("d-none");
+    gameArea.classList.remove("d-none");
+
+    resultBlock.classList.add("d-none");
+    computerItem.innerHTML = `<div class="placeholder"></div>`;
+});
 
 
 
