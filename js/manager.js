@@ -117,6 +117,8 @@ gameArea.addEventListener("click",(e)=>{
             resultTitle.innerHTML=`
             <h1 class="result-title">YOU WIN</h1>
             `;
+            const player = document.querySelector("#picked-item .choice");
+            player.classList.add("winner");
             addScore();
         }
         else {
@@ -125,6 +127,8 @@ gameArea.addEventListener("click",(e)=>{
             <h1 class="result-title">YOU LOSE</h1>
             `;
             body.classList.add("computer-wins");
+            const computer = document.querySelector("#computer-item .choice");
+            computer.classList.add("winner");
         }
         updateScore();
         resultBlock.classList.remove("d-none");
