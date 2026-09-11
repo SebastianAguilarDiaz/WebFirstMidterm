@@ -34,7 +34,14 @@ gameArea.addEventListener("click",(e)=>{
     gameArea.classList.add("d-none");
     duelArea.classList.remove("d-none");
 
-    
+    pickedItem.innerHTML = `
+        <div class="choice ${choice}">
+            <img
+                src="./images/icon-${choice}.svg"
+                alt="Lizard"
+            >
+        </div>
+    `;
 });
 
 let addScore=()=>{
