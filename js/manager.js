@@ -34,6 +34,11 @@ const wins=(choice1, choice2)=>{
 
 };
 
+
+// updating score at the beggining of the round
+updateScore();
+
+
 gameArea.addEventListener("click",(e)=>{
     var a=0;
     if(e.target instanceof HTMLButtonElement)
@@ -79,17 +84,22 @@ gameArea.addEventListener("click",(e)=>{
     let step =0.01;
     computerItem.style.opacity=0;
     
+    
     const fadeIn=()=>{
         if( i*step<1){
             computerItem.style.opacity=step * i;
-            console.log(i);
+
             i++;
-            setTimeout(fadeIn,500/(1/step));
+            setTimeout(fadeIn,1000*step);
         }
 
     }
-
     setTimeout(fadeIn,2000);
+    setTimeout(()=>{
+        if(wins(choice,computersChoice))addScore();
+        else decreaseScore();
+        updateScore();
+    },2500)
 });
 
 
