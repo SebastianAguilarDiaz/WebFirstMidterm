@@ -37,7 +37,7 @@ gameArea.addEventListener("click",(e)=>{
     duelArea.classList.remove("d-none");
 
     pickedItem.innerHTML = `
-        <div class="choice  ">
+        <div class="choice ${choice}">
             <img
                 src="./images/icon-${choice}.svg"
                 alt="Lizard"
@@ -47,7 +47,7 @@ gameArea.addEventListener("click",(e)=>{
 
 
     computerItem.innerHTML=`
-        <div class="choice ">
+        <div class="choice ${computersChoice}">
             <img
                 src="./images/icon-${computersChoice}.svg"
                 alt="Lizard"
