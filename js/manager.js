@@ -1,8 +1,9 @@
-scoreText=document.getElementById("number-text");
-rulesButton=document.getElementById("rules-button");
-gameArea=document.getElementById("game-area");
+const scoreText=document.getElementById("number-text");
+const rulesButton=document.getElementById("rules-button");
+const gameArea=document.getElementById("game-area");
 
-
+const duelArea = document.getElementById("duel-area");
+const pickedItem = document.getElementById("picked-item");
 
 let options=["rock","paper","scissors","lizard","spock"]
 
@@ -22,6 +23,10 @@ gameArea.addEventListener("click",(e)=>{
     let computersChoice=options[index];
     console.log(choice);
     console.log(computersChoice);
+
+    gameArea.classList.add("d-none");
+    duelArea.classList.remove("d-none");
+
     
 });
 
