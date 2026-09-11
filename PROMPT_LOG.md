@@ -38,3 +38,24 @@
 
 
 **Integration & Learnings**:  We learned how to save data even when the page is recharged, also learned how does localStorage.setItem() works, it saves the information in the navigator.
+
+-----
+
+**Goal:** Create a rules window that acts as a floating window on the desktop but takes up the full screen on mobile devices.
+
+**Prompt**: "What Bootstrap component can pop as a small window on a computer and as a full screen on a mobile phone. Give me the code for it; instead of adding text in the body, add an image."
+
+
+**The Human Audit & Modifications**: The AI identified the component as the Bootstrap Modal using the modal-fullscreen-sm-down responsive class. It generated the base structure, and we inserted our specific rules image, centered it, and added the font specifications to the title.
+
+**Integration & Learnings**:  We learned about other Bootstrap elements and their variants. Like modal and modal-fullscreen-sm-down for this case. We discovered how helpful these built-in tools are to simplify UI transitions without having to write a lot of media queries.
+
+-----
+
+**Goal:** Creat the second screen where the tokens are compared side-by-side, ensuring the labels move from above the tokens on desktop to below the tokens on mobile.
+
+**Prompt**: "I have an area divided into two with tokens on each side. How can I make them so that on the computer, they sit side-by-side with text above them, and then on mobile screens, the tokens shrink so they don't cover the whole screen, and the text moves to be below the tokens?"
+
+**The Human Audit & Modifications**: The AI suggested using Flexbox and media queries. We implemented the solution but noticed the colored borders disappeared; we checked the code and realized we needed to change 'border: 20px solid;' to 'border-width: 20px;' so it wouldn't overwrite our custom token colors.
+
+**Integration & Learnings**: We learned that we don't always need to duplicate HTML or use JavaScript to change the visual ordering of elements; CSS has properties like flex-direction: column-reverse that allows us to flip the layout based on screen size.
