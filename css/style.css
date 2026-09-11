@@ -156,14 +156,7 @@ body {
     z-index: 1;
     margin: 55px;
 }
-  .hidden {
-    opacity: 0;
-    transition: opacity 0.5s ease;
-  }
 
-  .visible {
-    opacity: 1;
-  }
 
 /* =========================
    CHOICES
