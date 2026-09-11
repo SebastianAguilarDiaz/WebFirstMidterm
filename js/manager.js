@@ -4,8 +4,15 @@ const gameArea=document.getElementById("game-area");
 
 const duelArea = document.getElementById("duel-area");
 const pickedItem = document.getElementById("picked-item");
-
+let score =0;
 let options=["rock","paper","scissors","lizard","spock"]
+let rules={
+    "rock":     ["scissors","lizard"],
+    "paper":    ["rock","spcok"],
+    "scissors": ["paper","lizard"],
+    "lizard":   ["paper","spcok"],
+    "spock":    ["scissors","rock"]
+}
 
 gameArea.addEventListener("click",(e)=>{
     var a=0;
@@ -29,6 +36,17 @@ gameArea.addEventListener("click",(e)=>{
 
     
 });
+
+let addScore=()=>{
+    score++;
+};
+let decreaseScore=()=>{
+    score--;
+};
+let updateScore=()=>{
+    scoreText.textContent=score;
+
+};
 
 
 
