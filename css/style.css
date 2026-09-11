@@ -227,7 +227,7 @@ background:
     cursor: pointer;
 }
 .play-again:hover{
-    color: #3b4363;
+    background-color: #3b4363;
 }
 
 /* =========================
