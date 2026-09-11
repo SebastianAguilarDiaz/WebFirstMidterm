@@ -52,6 +52,8 @@ gameArea.addEventListener("click",(e)=>{
     console.log(computersChoice);
     console.log(wins(choice,computersChoice));
 
+    
+
     gameArea.classList.add("d-none");
     duelArea.classList.remove("d-none");
 
@@ -66,13 +68,28 @@ gameArea.addEventListener("click",(e)=>{
 
 
     computerItem.innerHTML=`
-        <div class="choice ${computersChoice}">
+        <div class="choice ${computersChoice} style=" opacity:0 ;"">
             <img
                 src="./images/icon-${computersChoice}.svg"
                 alt="Lizard"
             >
         </div>
     `;
+    var i=0;
+    let step =0.01;
+    computerItem.style.opacity=0;
+    
+    const fadeIn=()=>{
+        if( i*step<1){
+            computerItem.style.opacity=step * i;
+            console.log(i);
+            i++;
+            setTimeout(fadeIn,500/(1/step));
+        }
+
+    }
+
+    setTimeout(fadeIn,2000);
 });
 
 
